@@ -1,0 +1,46 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.circle{
+    border-radius: 50%;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+}
+
+.global{
+    display: flex;
+    flex-direction: row;
+}
+
+#matrice{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+div:not(#matrice):not(.global){
+    width: 10%;
+    height: 10%;
+    border:1px solid black;
+    margin: 5%;
+}
+
+#rotate {
+    transform: rotate(45deg);
+}
+
+button{
+    height: min-content;
+}
+
+.plein {
+    background-color: black;
+}
