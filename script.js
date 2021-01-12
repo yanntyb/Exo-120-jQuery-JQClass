@@ -7,5 +7,16 @@ $(".circle").click(function (){
 })
 
 $("div").not(".global").not("#matrice").not(".ligne").not(".circle").click(function (){
-    $(this).parent().children().addClass(this.className);
+    $(this).toggleClass("plein");
+    console.log($(this).attr("class"));
+    Array.from($(this).parent().children().not(":not('.circle')")).forEach(elem => {
+        if($(this).attr("class") !== ""){
+            if(!elem.className.includes("plein")){
+                elem.className += " plein";
+            }
+        }
+        else{
+            elem.classList.remove("plein")
+        }
+    });
 })
